@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamingNime - Solo Leveling</title>
+  <link rel="stylesheet" href="../style.css">
+<script src="../script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <h1>StreamingNime</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="solo-leveling-Seson2">
+      <h2>Solo Leveling Seson2</h2>
+      <!-- Perbaikan pada gambar poster -->
+      <img src="data/Solo_Leveling_season_2.jpg" alt="Solo Leveling Poster" width="200">
+
+      <p><strong>Judul:</strong> Solo Leveling Seson2</p>
+      <p><strong>Japanese:</strong> 俺だけレベルアップな件</p>
+      <p><strong>Skor:</strong> 8.29</p>
+      <p><strong>Produser:</strong> Aniplex, Crunchyroll, Netmarble, Kakao Piccoma, D&C Media</p>
+      <p><strong>Tipe:</strong> TV</p>
+      <p><strong>Status:</strong> Sedang berjalan</p>
+      <p><strong>Total Episode:</strong> Belum di ketahui</p>
+      <p><strong>Durasi:</strong> 23 Menit</p>
+      <p><strong>Tanggal Rilis:</strong> 5 Januari 2025</p>
+      <p><strong>Studio:</strong> A-1 Pictures</p>
+      <p><strong>Genre:</strong> Action, Adventure, Fantasy</p>
+
+      <p>
+        I Level Up Alone – Sepuluh tahun yang lalu, “Gerbang” muncul dan menghubungkan dunia nyata dengan dunia sihir dan monster. Untuk memerangi binatang keji ini, orang-orang biasa menerima kekuatan super dan dikenal sebagai “Pemburu”. Sung Jin-Woo yang berusia dua puluh tahun adalah salah satu Hunter tersebut, tetapi dia dikenal sebagai “Yang Terlemah di Dunia,” karena kekuatannya yang menyedihkan dibandingkan dengan E-Rank yang sangat sedikit sekalipun. Tetap saja, dia memburu monster tanpa kenal lelah di Gates berpangkat rendah untuk membayar tagihan medis ibunya.
+Namun, gaya hidup menyedihkan ini berubah ketika Jin-Woo—yang percaya dirinya adalah satu-satunya yang tersisa untuk mati dalam misi yang salah—terbangun di rumah sakit tiga hari kemudian dan menemukan layar misterius mengambang di depannya. “Log Pencarian” ini menuntut Jin-Woo menyelesaikan program pelatihan yang tidak realistis dan intens, atau menghadapi hukuman yang sesuai. Awalnya enggan untuk mematuhi karena ketatnya misi tersebut, Jin-Woo segera menyadari bahwa hal itu mungkin akan mengubahnya menjadi salah satu Pemburu paling menakutkan di dunia
+      <p>
+        
+      <section id="episodes">
+      <h3>Episode List</h3>
+      <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/BRIlQYia#c3V-t6FFiCCd5usrUeuC5NWf1XHLPp1i1fbH5AFZy8Q">Episode 1</button>
+      <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/RZIzlSLZ#pXeSFoaA-U1-1bJlA_Y-rgtToCNNvKpUDURJLzDfQiQ">Episode 2</button>
+      <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/tMAXzRiI#lCD-7TZ9bwV_q-ZXCZ63AMSJ16wMTEieyMemYy_nBdU">Episode 3</button> 
+      <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/sdAxRZxQ#HalE6eTM2ioXEmN0npPpge5B_3rOseINCqb1P2jHs58">Episode 4</button>
+      <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/NUwh1AZI#hm05v1roPUgw1v81-928KO7VpmoxCpRQygsNDwZMH3c">Episode 5</button>
+      <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/YRwGDSyT#BBYHBlxwn91_7rQoc5B6VYzVH1bf8ky7BA6RtCNocvQ">Episode 6</button>
+      <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/Mc43AThS#gAAn_Qy_EXBNi4VskyUGMkSmewcPrkdy4ZywLwJsH8g">Episode 7</button>
+      <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/tEASGKCL#6AKZybT3kXPEtsrIH2hoZZtEwZezemLtvKbVjI2wQ7M">Episode 8</button>
+      <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/5IpGVQSb#eI6fcN-7Gk143MkREvyhHg_dzxJVEJ_3MFhx1N0dDEg">Episode 9</button> 
+    </section>
+
+<section id="video-player">
+      <h3>Now Playing</h3>
+      <div id="episode-player">
+        <p>Pilih episode untuk mulai menonton.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 StreamingNime</p>
+  </footer>
+</body>
+</html>
