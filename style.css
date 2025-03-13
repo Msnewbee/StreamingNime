@@ -67,15 +67,15 @@ section {
   margin-top: 20px;
 }
 
-.image-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
+.button-img img {
+    width: 200px; /* Ubah ukuran sesuai kebutuhan */
+    border-radius: 10px; /* Agar gambar memiliki sudut membulat */
+    transition: transform 0.2s ease-in-out; /* Animasi saat hover */
 }
 
-.image-button img {
-    display: block;
+.button-img img:hover {
+    transform: scale(1.05); /* Sedikit membesar saat dihover */
+    cursor: pointer; 
 }
 
 /* Episode Player */
