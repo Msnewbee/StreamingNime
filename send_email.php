@@ -1,24 +1,39 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+    // Ambil data dari form
+    $name    = strip_tags(trim($_POST["name"]));
+    $email   = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $message = trim($_POST["message"]);
 
-    // Validasi email
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Email tidak valid.";
+    // Validasi data
+    if ( empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
+        // Jika data tidak valid, redirect kembali ke form
+        header("Location: index.html?error=invalid");
         exit;
     }
 
-    $to = "bilariko2@gmail.com";
-    $subject = "Pesan Baru dari $name";
-    $body = "Anda menerima pesan baru dari:\n\nNama: $name\nEmail: $email\n\nPesan:\n$message";
-    $headers = "From: $email";
+    // Set email penerima
+    $recipient = "bilariko2@gmial.com";
 
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Pesan berhasil dikirim!";
+    // Set subjek email
+    $subject = "Pesan dari $name";
+
+    // Set isi email
+    $email_content  = "Nama: $name\n";
+    $email_content .= "Email: $email\n\n";
+    $email_content .= "Pesan:\n$message\n";
+
+    // Set header email
+    $email_headers = "From: $name <$email>";
+
+    // Kirim email
+    if (mail($recipient, $subject, $email_content, $email_headers)) {
+        header("Location: index.html?success=1");
     } else {
-        echo "Terjadi kesalahan saat mengirim pesan.";
+        header("Location: index.html?error=sendfailed");
     }
+} else {
+    header("Location: index.html");
+    exit;
 }
 ?>
