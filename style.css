@@ -67,10 +67,15 @@ section {
   margin-top: 20px;
 }
 
-/* Solo Leveling Section */
-#solo-leveling img {
-  display: block;
-  margin-bottom: 20px;
+.image-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.image-button img {
+    display: block;
 }
 
 /* Episode Player */
