@@ -1,3 +1,6 @@
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1357574968133580"
+     crossorigin="anonymous"></script>
+
 fetch("https://example.com/api/data", { mode: "no-cors" })
   .then(response => console.log(response))
   .catch(error => console.error("Fetch error:", error));
