@@ -17,7 +17,7 @@ function isValidUrl(url) {
     } catch (_) {
         return false;
     }
-}}
+}
 
 document.addEventListener("DOMContentLoaded", function() {
   const lazyImages = document.querySelectorAll("img.lazy");
