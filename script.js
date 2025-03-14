@@ -31,3 +31,12 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+const fetch = require('node-fetch');
+
+fetch('https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/dd226011-8241-41de-8811-8ac3bd35d8b9', {
+    method: 'POST'
+})
+.then(res => res.json())
+.then(data => console.log('Deploy triggered:', data))
+.catch(err => console.error('Error triggering deploy:', err));
+
