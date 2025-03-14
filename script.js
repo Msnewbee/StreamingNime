@@ -26,3 +26,23 @@ document.addEventListener("DOMContentLoaded", function() {
         img.removeAttribute("data-src");
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll("img").forEach(img => {
+        img.addEventListener("error", function() {
+            this.src = "images/default.jpg"; // Ganti dengan gambar default
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll("iframe, video").forEach(media => {
+        media.addEventListener("error", function() {
+            this.outerHTML = "<p>Maaf, konten tidak dapat dimuat.</p>";
+        });
+    });
+});
+
+window.onerror = function(message, source, lineno, colno, error) {
+    alert("Terjadi kesalahan: " + message);
+};
