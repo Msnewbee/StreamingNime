@@ -1,16 +1,23 @@
 function loadEpisode(element) {
-    // Ambil URL embed dari data-url
-    const embedUrl = element.getAttribute("data-url");
+    let embedUrl = element.getAttribute("data-url");
+    let player = document.getElementById("episode-player");
     
-    if (!embedUrl) {
-        alert("URL episode tidak ditemukan!");
+    if (!embedUrl || !isValidUrl(embedUrl)) {
+        alert("URL episode tidak valid.");
         return;
     }
-
-    // Ganti isi #episode-player dengan iframe (embed MEGA)
-    document.getElementById('episode-player').innerHTML =
-        `<iframe width="640" height="360" frameborder="0" src="${embedUrl}" allowfullscreen></iframe>`;
+    
+    player.setAttribute("src", embedUrl);
 }
+
+function isValidUrl(url) {
+    try {
+        new URL(url);
+        return true;
+    } catch (_) {
+        return false;
+    }
+}}
 
 document.addEventListener("DOMContentLoaded", function() {
   const lazyImages = document.querySelectorAll("img.lazy");
