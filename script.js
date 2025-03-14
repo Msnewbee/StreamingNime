@@ -1,3 +1,7 @@
+fetch("https://example.com/api/data", { mode: "no-cors" })
+  .then(response => console.log(response))
+  .catch(error => console.error("Fetch error:", error));
+
 function loadEpisode(element) {
     let embedUrl = element.getAttribute("data-url");
     let player = document.getElementById("episode-player");
