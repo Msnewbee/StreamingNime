@@ -10,14 +10,19 @@ function loadEpisode(element) {
     player.setAttribute("src", embedUrl);
 }
 
-function isValidUrl(url) {
+async function run() {
     try {
-        new URL(url);
-        return true;
-    } catch (_) {
-        return false;
+        const response = await fetch("URL_YANG_DIGUNAKAN");
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error("Fetch error:", error);
     }
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
     let lazyImages = document.querySelectorAll("img.lazy");
