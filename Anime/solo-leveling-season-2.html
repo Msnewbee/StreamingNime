@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamingNime - Solo Leveling Season 2</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <h1>StreamingNime</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="solo-leveling">
+      <h2>Solo Leveling Season 2</h2>
+      <img class="lazy" data-src="data/Sololeveling2.jpg" alt="Solo Leveling Season 2 Poster" width="200">
+
+      <p><strong>Judul:</strong> Solo Leveling Season 2</p>
+      <p><strong>Japanese:</strong> 俺だけレベルアップな件 2</p>
+      <p><strong>Skor:</strong> 8.50</p>
+      <p><strong>Studio:</strong> A-1 Pictures</p>
+      <p><strong>Genre:</strong> Action, Adventure, Fantasy</p>
+
+      <section id="episodes">
+        <h3>Episode List</h3>
+        <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/example1">Episode 1</button>
+        <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/example2">Episode 2</button>
+        <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/example3">Episode 3</button>
+        <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/example4">Episode 4</button>
+        <button onclick="loadEpisode(this)" data-url="https://mega.nz/embed/example5">Episode 5</button>
+      </section>
+
+      <section id="video-player">
+        <h3>Now Playing</h3>
+        <div id="episode-player">
+          <p>Pilih episode untuk mulai menonton.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 StreamingNime - Semua Hak Dilindungi.</p>
+  </footer>
+
+  <script>
+    function loadEpisode(button) {
+      const player = document.getElementById('episode-player');
+      const url = button.getAttribute('data-url');
+      player.innerHTML = `<iframe src="${url}" width="640" height="360" allowfullscreen></iframe>`;
+    }
+  </script>
+
+</body>
+</html>
